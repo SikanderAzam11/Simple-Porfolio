@@ -4,8 +4,6 @@ import { Model } from './model';
 export default function Experience()
 {
     const computer = useGLTF('./macbook.gltf')
-    console.log(computer);
-    
     
     return <>
 
