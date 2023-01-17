@@ -8,6 +8,7 @@
 - 📫 How to reach me: **azamsikander183@gmail.com**
 
 - ⚡ What I like to do: **I like so much reading, basketball and skateboarding...and coding of course**
+- <a href="https://simple-portfolio-12.netlify.app/">Live Site<a/>
 
 <h3 align="center">Connect with me:</h3>
 <div align="center">
