@@ -15,6 +15,10 @@ export default function Experience()
             three.camera.updateMatrixWorld()
         }
     })
+    if(window.innerWidth < 650) {
+        three.camera.fov = 85
+        three.camera.updateMatrixWorld()
+    }
     
     
     return <>
