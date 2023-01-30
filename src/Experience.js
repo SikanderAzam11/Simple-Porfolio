@@ -1,15 +1,26 @@
 import { Text, ContactShadows, PresentationControls, Float, Environment, useGLTF } from '@react-three/drei'
+import { useThree } from '@react-three/fiber';
 import { Model } from './model';
 
 export default function Experience()
 {
     const computer = useGLTF('./macbook.gltf')
+    const three = useThree()
+    window.addEventListener('resize', () => {
+        if(window.innerWidth < 650) {
+            three.camera.fov = 85
+            three.camera.updateMatrixWorld()
+        } else {
+            three.camera.fov = 45
+            three.camera.updateMatrixWorld()
+        }
+    })
+    
     
     return <>
 
         <color args={ [ '#695b5b' ] } attach="background" />
-
-        <Environment preset="city" />
+        <Environment files={'./hdri.hdr'} />
         
         <PresentationControls
             global
