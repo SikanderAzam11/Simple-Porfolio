@@ -22,7 +22,7 @@ root.render(
     <>
     <Canvas
         camera={ {
-            fov: 45,
+            fov: `${window.innerWidth < 650 ? 85 : 45}`,
             near: 0.1,
             far: 2000,
             position: [ -3, 1.5, 4 ]
