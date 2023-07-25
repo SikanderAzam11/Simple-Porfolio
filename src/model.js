@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef,useEffect } from "react";
 import { Html, useGLTF } from "@react-three/drei";
 import gsap from "gsap";
 
