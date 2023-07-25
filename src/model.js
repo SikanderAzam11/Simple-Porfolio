@@ -5,11 +5,13 @@ import gsap from "gsap";
 export function Model(props) {
   const { nodes, materials } = useGLTF("/macbook.gltf");
   const top = useRef();
-  setTimeout(() => {
+  useEffect(() => {  
+    if(top.current) {
       gsap.to(top.current.rotation, {x:1.31,y:0,z:0,duration:2, ease: 'power1.out',onComplete: () => {
        gsap.to(document.querySelector('.htmlScreen').style, {opacity:1,duration:1,ease: 'power1.out'})
       }})
-  },2000)
+    }
+  },[top.current])
   return <>
     <group {...props} dispose={null} position-y={-1.2}>
         <Html
